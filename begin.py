@@ -5,10 +5,10 @@ import os
 import cv2
 
 
-X = np.load("X.npy")  # pre processed images 
-Y = np.load("Y.npy")  # labels 
+X = np.load("X.npy") 
+Y = np.load("Y.npy")   
 
-# Normalize images
+
 X = X / 255.0
 
 
@@ -32,3 +32,4 @@ model.fit(X, Y, epochs=10, validation_split=0.2)
 
 
 model.save("sign_language_model.h5")
+
